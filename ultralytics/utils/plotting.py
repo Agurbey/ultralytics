@@ -365,7 +365,7 @@ class Annotator:
         """
         cv2.polylines(self.im, [np.array(reg_pts, dtype=np.int32)], isClosed=True, color=color, thickness=thickness)
 
-    def draw_centroid_and_tracks(self, track, color=(255, 0, 255), track_thickness=2):
+    def draw_centroid_and_tracks(self, track, color=(0, 255, 255), track_thickness=2):
         """
         Draw centroid point and track trails.
 
@@ -588,7 +588,7 @@ class Annotator:
         )
         cv2.putText(self.im, stage_text, stage_text_position, 0, font_scale, (0, 0, 0), line_thickness)
 
-    def seg_bbox(self, mask, mask_color=(255, 0, 255), det_label=None, track_label=None):
+    def seg_bbox(self, mask, mask_color=(0, 255, 255), det_label=None, track_label=None):
         """
         Function for drawing segmented object in bounding box shape.
 
@@ -656,7 +656,7 @@ class Annotator:
         cv2.circle(self.im, centroids[0], 6, centroid_color, -1)
         cv2.circle(self.im, centroids[1], 6, centroid_color, -1)
 
-    def visioneye(self, box, center_point, color=(235, 219, 11), pin_color=(255, 0, 255), thickness=2, pins_radius=10):
+    def visioneye(self, box, center_point, color=(235, 219, 11), pin_color=(0, 255, 255), thickness=2, pins_radius=10):
         """
         Function for pinpoint human-vision eye mapping and plotting.
 
